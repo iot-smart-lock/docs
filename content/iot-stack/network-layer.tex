@@ -5,10 +5,10 @@ Der Network-Layer beschreibt die Protokolle und Netzwerk-Server, die die \ac{IoT
 
 Für die Übertragung der \ac{GPS}-Daten wird \textbf{\ac{LoRaWAN}} verwendet und sendet die Daten an ein Gateway. Das Gateway ist Teil des \ac{TTN}s, ein Zusammenschluss aus vielen öffentlichen \ac{LoRaWAN}-Gateways. Im \ac{TTN} werden die Daten über einen Parser in ein \ac{JSON}-Format gebracht und können über herkömmliche Netzwerkprotokolle, wie \ac{HTTP}-Web Sockets oder \ac{MQTT} an einen Server übertragen werden.
 
-Die vorgestellte Smart-Lock Lösung verwendet für die weitere Übertragung an das Service-Layer \textbf{\ac{MQTT}}. Das hat den Vorteil, dass sich Nachrichten, sobald sie empfangen werden, an den Server übertragen lassen und nicht über eine Request-Response Verfahren abgefragt werden müssen. 
+Die vorgestellte Smart-Lock Lösung verwendet für die weitere Übertragung an das Service-Layer \textbf{\ac{MQTT}}. Das hat den Vorteil, dass sich Nachrichten, sobald sie empfangen werden, an den Server übertragen lassen und nicht über ein Request-Response Verfahren abgefragt werden müssen. 
 
 Zusätzlich zu \ac{LoRaWAN} und \ac{MQTT} wird in der Lösung \textbf{\ac{HTTP}} für die Kommunikation zwischen App und Server verwendet. Hierfür sendet die Benutzer-App eine \ac{HTTP}-Request an den Node-Red Server, der die Anfrage verarbeitet und die Device-Daten an die App zurücksendet. 
 
 Zuletzt wird \textbf{\ac{BLE}} für das Öffnen und Schließen des Schlosses und somit für die direkte Kommunikation von App zu Device verwendet. \ac{BLE} hat zwei entscheidende Vorteile: geringer Energieverbrauch und geringe Reichweite. Ersteres ist notwendig, damit das Schloss möglichst lange Akkulaufzeiten hat und zweiteres, damit das Schloss nur aus unmittelbarer Nähe geöffnet oder geschlossen werden kann.
 
-Zusammengefasst, deckt der Network-Layer die Kommunikation von allen verwendeten Hardware- und Software-Modulen ab und verwendet hierfür \ac{LoRaWAN} über das \ac{TTN} als Gateway zu \ac{MQTT}, sowie \ac{HTTP} und \ac{BLE} für die Kommunikation zur Benutzer-App.
+Zusammengefasst deckt der Network-Layer die Kommunikation von allen verwendeten Hardware- und Software-Modulen ab und verwendet hierfür \ac{LoRaWAN} über das \ac{TTN} als Gateway zu \ac{MQTT}, sowie \ac{HTTP} und \ac{BLE} für die Kommunikation zur Benutzer-App.
