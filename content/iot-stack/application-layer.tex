@@ -1,4 +1,10 @@
 %!TEX root = ../../dokumentation.tex
 
 \section{Application-Layer}
-\todo{Hier anfangen zu schreiben}
+Die vierte Schicht des IoT-Application Stack ist das Application Layer. Im Application Layer geht es darum, die vernetzten Geräte für den Nutzer verwendbar zu machen. Hierfür werden Applikationen entwickelt. Im Falle des IoT Smart-Locks sollte dies eine Handy-Applikation sein, welche die Kommunikation des Nutzers mit dem Schloss ermöglicht.
+\\ 
+Die Anforderungen an die App sind recht simpel: Der Nutzer soll die Schlösser in der App angezeigt bekommen und nahegelegene Schlösser entsperren können. Die Anzeige soll zweiermaßen ermöglicht werden. Einerseits soll eine simple Liste die Schlösser aufführen. Zusätzlich soll auch eine Karte die Geopositionen der Schlösser mit hoher Genauigkeit anzeigen, um speziell dem Verlustpotential entgegenzuwirken. Der Nutzer soll nahegelegene Schlösser entsperren können. Der Zusatz nahegelegen ist hierbei wichtig, da die Ver- bzw. Entriegelung des Schlosses aus großer Distanz möglich sein soll.
+\\ 
+Die App setzt genau obige Anforderungen um. Mithilfe einer Navigation Bar kann zwischen der Listen- und der Kartenansicht gewechselt werden. Nahegelegene Schlösser können Ver- und Entriegelt werden. Dem Benutzer werden alle Schlösser sowohl in der Liste, als auch auf der Karte angezeigt.
+\\ 
+Die Kommunikation der App läuft zweigeteilt: Zum einen empfängt die App die Geopositionen der Schlösser über \ac{HTTP} von dem Node-Red Server. Zum anderen kann über die \ac{BLE}-Konnektivitätsfähigkeit des Smartphones mit nahegelegenen Schlössern kommuniziert werden. 
