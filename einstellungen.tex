@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   Einstellungen
+%
+% Hier k�nnen alle relevanten Einstellungen f�r diese Arbeit gesetzt werden.
+% Dazu geh�ren Angaben u.a. �ber den Autor sowie Formatierungen.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sprache %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Aktuell sind Deutsch und Englisch unterst�tzt.
+%% Es werden nicht nur alle vom Dokument erzeugten Texte in
+%% der entsprechenden Sprache angezeigt, sondern auch weitere
+%% Aspekte angepasst, wie z.B. die Anf�hrungszeichen und
+%% Datumsformate.
+\setzesprache{de} % oder en
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Angaben  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Die meisten der folgenden Daten werden auf dem
+%% Deckblatt angezeigt, einige auch im weiteren Verlauf
+%% des Dokuments.
+\setzemartrikelnr{6378195}
+\setzekurs{INF20D}
+\setzetitel{TITEL}
+\setzedatumAbgabe{XX.XX.XXXX}
+% \setzefirma{Robert Bosch GmbH}
+% \setzefirmenort{Stuttgart Feuerbach}
+\setzeabgabeort{Stuttgart}
+\setzeabschluss{Bachelor of Science}
+\setzestudiengang{Informatik}
+\setzedhbw{Stuttgart}
+\setzebetreuer{DOZENT}
+\setzezeitraum{XX.XX - XX.XX.XXXX}
+\setzearbeit{Seminararbeit}
+\setzeautor{Tom Freudenmann}
+% \setzegutachter{GUTACHTER}
+
+\inhalttrue                 % auskommentieren oder �ndern zu \inhaltfalse, falls kein Inhaltsverzeichnis eingef�gt werden soll
+\unterschriftenblattfalse    % auskommentieren oder �ndern zu \unterschriftenblattfalse, falls kein Unterschriftenblatt eingef�gt werden soll
+\selbsterkltrue             % auskommentieren oder �ndern zu \selbsterklfalse, wenn keine Selbstst�ndigkeitserkl�rung ben�tigt wird
+%\sperrvermerktrue           % auskommentieren oder �ndern zu \sperrvermerkfalse, wenn kein Sperrvermerk ben�tigt wird
+\abkverztrue                % auskommentieren oder �ndern zu \abkverzfalse, wenn kein Abk�rzungsverzeichnis ben�tigt wird
+\abbverztrue                % auskommentieren oder �ndern zu \abbverzfalse, wenn kein Abbildungsverzeichnis ben�tigt wird
+% \tableverztrue              % auskommentieren oder �ndern zu \tableverzfalse, wenn kein Tabellenverzeichnis ben�tigt wird
+% \listverztrue               % auskommentieren oder �ndern zu \listverzfalse, wenn kein Listingsverzeichnis ben�tigt wird
+% \formelverztrue             % auskommentieren oder �ndern zu \formelverzfalse, wenn kein Formelverzeichnis ben�tigt wird
+%\formelgroeverztrue			% auskommentieren oder �ndern zu \formelgroeverzfalse, wenn kein Formelgr��enverzeichnis ben�tigt wird
+% \abstracttrue               % auskommentieren oder �ndern zu \abstractfalse, wenn kein Abstract gew�nscht ist
+% \bothabstractstrue          % auskommentieren oder �ndern zu \bothabstractsfalse, wenn nur der Abstract in der Hauptsprache eingef�gt werden soll
+\appendixtrue               % auskommentieren oder �ndern zu \appendixfalse, wenn kein Anhang gew�nscht ist
+\literaturtrue              % auskommentieren oder �ndern zu \literaturfalse, wenn kein Literaturverzeichnis gew�nscht ist (\appendixtrue muss gesetzt sein!)
+%\glossartrue                % auskommentieren oder �ndern zu \glossarfalse, wenn kein Glossar gew�nscht ist (\appendixtrue muss gesetzt sein!)
+\watermarkfalse             % auskommentieren oder �ndern zu \watermarktrue, wenn Wasserzeichen auf dem Titelblatt eingef�gt werden soll
+
+\refWithPagesfalse          % �ndern zu \refWithPagestrue, wenn die Seitenzahl bei Verweisen auf Kapitel engef�gt werden sollen
+
+
+% Angabe des roten/gelben Punktes auf dem Titelblatt zur Kennzeichnung der Vertraulichkeitsstufe.
+% M�gliche Angaben sind \yellowdottrue und \reddottrue. Werden beide angegeben, wird der rote Punkt gezeichnet.
+% Wird keines der Kommandos angegeben, wird kein Punkt gezeichnet
+%\yellowdottrue
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bei Fehlern w�hrend der Verarbeitung bitte in ads/header.tex bei der
+%% Einbindung des Pakets biblatex (ungef�hr ab Zeile 110,
+%% einmal f�r jede Sprache), biber in bibtex �ndern.
+\newcommand{\ladeliteratur}{%
+\addbibresource{bibliographie.bib}
+}
+
+%% Zitierstil
+%% siehe: http://ctan.mirrorcatalogs.com/macros/latex/contrib/biblatex/doc/biblatex.pdf (3.3.1 Citation Styles)
+%% m�gliche Werte z.B numeric-comp, alphabetic, authoryear
+\setzezitierstil{ieee}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Verschiedene Schriftarten
+% laut nag Warnung: palatino obsolete, use mathpazo, helvet (option scaled=.95), courier instead
+\setzeschriftart{lmodern} % palatino oder goudysans, lmodern, libertine
+
+%% Abstand vor Kapitel�berschriften zum oberen Seitenrand
+\setzekapitelabstand{5pt}
+
+%% Spaltenabstand
+\setzespaltenabstand{5pt}
+%%Zeilenabstand innerhalb einer Tabelle
+\setzezeilenabstand{1.5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

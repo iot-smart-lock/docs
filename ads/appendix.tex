@@ -1,0 +1,38 @@
+% !TeX root = ../dokumentation.tex
+\setpagestylefoot
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand\thelstlisting{A\arabic{lstlisting}}
+\renewcommand\thetable{A\arabic{table}}
+
+% Nummer des Inhaltes mit \setcounter{figure}{"`Number"'} (figure, lstlisting or table) ändern wenn nötig
+
+\addchap{\langanhang}
+
+
+% Quellenverzeichnis nach Literatur und Weblinks trennen
+%\printbibliography[heading=subbibintoc,title={Literatur},nottype=online]
+%\printbibliography[heading=subbibintoc,title={Weblinks},type=online]
+
+% Quellenverzeichnis nicht trennen
+\ifliteratur
+    \printbibliography[heading=subbibintoc]
+\fi
+
+\newpage
+\section*{Abbildungen}
+\addcontentsline{toc}{section}{Abbildungen}
+\setcounter{figure}{0}
+%abbildung 1
+% \begin{figure}[!htbp]
+% 	\centering
+%     \includegraphics[width=1\linewidth]{umsatzanteil-von-amazon-am-online-handel-in-deutschland-2019}
+%     \caption{\glqq Diese Statistik bildet den Umsatzanteil von Amazon am Gesamtumsatz des Online-Handels in Deutschland im Jahr 2019 ab.\grqq}
+%     \label{fig:umsatzanteilAmazon}
+% \end{figure}
+
+
+
+% Glossar
+\ifglossar
+    \printglossary[style=altlist,title=\langglossar]
+\fi
