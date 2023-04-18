@@ -3,9 +3,18 @@
 \section{Device-Layer}
 
 Im Device-Layer finden sich alle Sensoren und Aktoren der \ac{IoT}-Lösung wieder. 
-Zu den Sensoren gehört ein \ac{GPS}-Chip, der \ac{GPS}-Daten empfängt, um den Standort des Smart-Locks festzustellen. Eine \ac{LED}, die den Zustand des Smart-Locks, also ob geschlossen 
-oder offen, darstellt, gehört zur Gruppe der Aktoren.
+Zu den Sensoren gehört ein \ac{GPS}-Chip, der \ac{GPS}-Daten empfängt, um den Standort des Smart-Locks festzustellen. 
+
+\ac{GPS}-Daten können in verschiedenen Darstellungsoptionen empfangen werden, darunter \emph{GPGGA} und \emph{GPRMC}. Da sich die empfangen Daten im Aufbau 
+je nach Protokoll unterscheiden, muss eine Vorverarbeitung der Daten stattfinden, um genaue Positionsdaten zu erhalten.
+Hierfür werden die \ac{GPS}-Daten, die in Form eines \emph{Strings} empfangen werden, anhand der im Datenstring enthaltenen Kommatas getrennt.
+Um nun für Karten verwendbare Positionsdaten zu erhalten, müssen die ausgelesenen Positionsdaten in Grad und Minuten konvertiert werden. Nachdem diese 
+Daten vorverarbeitet wurden sind diese Sendebereit.
+
+Eine \ac{LED}, die den Zustand des Smart-Locks, also ob geschlossen oder offen, darstellt, gehört zur Gruppe der Aktoren. Diese ist mit Hilfe eines \ac{PIO}-Pin direkt an den Mikrokontroller angeschlossen.
 
 Des Weiteren befinden sich zwei Netzwerkschnittstellen in Form zwei gesonderter Chips im Device-Layer der \ac{IoT}-Lösung. Ein \ac{LoRa}-Chip dient dem Senden und dem Empfangen von 
 \ac{LoRa}-Nachrichten mit Hilfe von \ac{LoRaWAN} an das \ac{TTN}. Ein \ac{BLE}-Chip ermöglicht eine Verbindung mit einem Mobilgerät und dient dem Empfangen von Befehlen, 
 die den Zustand des Smart-Locks ändern können. Diese Netzwerkprotokolle werden in Kapitel \ref{network} genauer beschrieben.
+
+Die Stromversorgung ist durch einen eingebauten Akku auf der Platine des Mikrokontrollers sichergestellt.
