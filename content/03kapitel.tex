@@ -1,10 +1,12 @@
 %!TEX root = ../dokumentation.tex
 
-\chapter{Ausblick}
-\begin{enumerate}
-    \item Sicherheit: Übertragung und Verbindung zu Schloss
-    \item Updates?!
-    \item Real umsetzen: Pricing
-    \item Langfristig Datenbankunmgebung
-    \item Abschluss: Gute initiale Grundlage für weitere Entwicklung
-\end{enumerate}
+\chapter{Ausblick und Fazit}
+Final lassen sich noch Überlegungen machen, wie das entwickelte Produkt verbessert werden könnte und was für eine Produktion an Entwicklungsschritten notwendig wäre.
+
+Ein relevantes und bisher kaum betrachtetes Thema ist definitv Sicherheit. Im umgesetzten Rahmen wurden sowohl bei der Bluetooth-Verbindung, als auch bei der Datenübertragung über LoRa keine Verschlüsselungen betrachtet. Um das Trial der IT-Sicherheit von Vertraulichkeit, Integrität und Verfügbarkeit zu erfüllen, müsste sich mit dem Thema Verschlüsselung beschäftigt werden.
+
+Bisher auch ungeachtet wurden Updates. Sogenannte \ac{OTA}-Updates sind mittlerweile Standard und erfordern erhöhte Datenübertragung für einen kurzen Zeitrahmen. Um dies zu ermöglichen, müsste sowohl das Übertragungsprotokoll, als auch die Verfügbarkeit während den Updates betrachtet werden.
+
+Für die reale Umsetzung und Produktion wäre selbstverständlich auch die Ingenieursleistung der Hardware notwendig. Während im \ac{IoT}-Lab lediglich ein \ac{PIO}-Pin zur Signalanzeige verwendet wurde, müsste für die Produktion der Magnetauslöser entwickelt werden und der Chip samt Sensoren in ein Vorhängeschloss eingebaut werden. Erforderliche Schritte für eine Produktion wären zudem Themen wie Pricing, legislative Bestimmungen, Verantwortlichkeiten, Support und vieles mehr.
+
+Abschließend lässt sich dennoch sagen, dass das \ac{IoT}-Lab der Studenten ein Erfolg war. Die Studenten beschäftigten sich mit der ESP32-Chip-Programmierung, der Netzwerkeinrichtung, der Node-Red-Konfiguration und der Applikationsentwicklung, um den entstandenen Prototypen eines Smart-Locks zu entwickeln.
