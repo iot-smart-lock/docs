@@ -5,7 +5,7 @@ Die vierte Schicht des \ac{IoT}-Application Stack ist der Application Layer. Im 
 
 Die Anforderungen an die App sind recht simpel: Der Nutzer soll die Schlösser in der App angezeigt bekommen und nahegelegene Schlösser entsperren können. Die Anzeige soll zweigleisig ermöglicht werden. Einerseits soll eine simple Liste die Schlösser aufführen. Zusätzlich soll auch eine Karte die Geo-Positionen der Schlösser mit hoher Genauigkeit anzeigen, um speziell dem Verlustpotential entgegenzuwirken. Der Nutzer soll nahegelegene Schlösser entsperren können. Der Zusatz nahegelegen ist hierbei wichtig, da die Ver- bzw. Entriegelung des Schlosses aus großer Distanz nicht möglich sein soll.
 
-Die App setzt genau obige Anforderungen um. Mithilfe einer Navigation Bar kann zwischen der Listen- und der Kartenansicht gewechselt werden. Nahegelegene Schlösser können ver- und entriegelt werden. Dem Benutzer werden alle Schlösser sowohl in der Such-Liste, als auch auf der Karte angezeigt (Abbildung \ref{fig:search}, \ref{fig:map}).
+Die App setzt genau obige Anforderungen mit dem Framework Flutter und der Sprache Dart um. Mithilfe einer Navigation Bar kann zwischen der Listen- und der Kartenansicht gewechselt werden. Nahegelegene Schlösser können ver- und entriegelt werden. Dem Benutzer werden alle Schlösser sowohl in der Such-Liste, als auch auf der Karte angezeigt (Abbildung \ref{fig:search}, \ref{fig:map}).
 
 Die Kommunikation der App läuft zweigeteilt: Zum einen empfängt die App die Geo-Positionen der Schlösser über \ac{HTTP} von dem Node-Red Server. Zum anderen kann über die \ac{BLE}-Konnektivität des Smartphones mit nahegelegenen Schlössern kommuniziert werden (Abbildung \ref{fig:connected}).
 
